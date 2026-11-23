@@ -1,6 +1,6 @@
 Programming Skills Portfolio — CodeLab II
 
-A collection of three interactive desktop applications built in Python using Tkinter, demonstrating event-driven GUI development, file input/output, input validation, and object-oriented programming.
+This repository contains my solutions for the CodeLab II Programming Skills Portfolio. Each exercise is built with Python and Tkinter to demonstrate GUI layout design, event-driven programming, file handling, and object-oriented structure.
 
 Repository Structure
 
@@ -16,59 +16,43 @@ Repository Structure
 └── README.md
 
 
-Exercises Overview
+Exercises
 
 1. Maths Quiz (01-MathsQuiz)
 
-An interactive 10-question arithmetic quiz featuring three difficulty levels (Easy, Moderate, and Difficult).
+A 10-question arithmetic quiz with three difficulty levels (Easy, Moderate, and Difficult).
 
-Key Features:
+Dynamically switches between the menu, quiz screen, and results screen inside a single window.
 
-Single-window dynamic screen transitions (clearWindow()).
+Generates random addition and subtraction questions scaled by difficulty.
 
-Difficulty-scaled random addition and subtraction problems (1–9, 10–99, 1000–9999).
+Awards 10 points on the first attempt and 5 points on the second attempt, with input validation and final letter grading (A+ to F).
 
-Two-attempt scoring system (10 points on first try, 5 points on second try) with inline feedback.
-
-Numeric input validation (try-except) and Enter key submission.
-
-Automated final score and letter grade (A+ to F) summary screen.
 
 
 
 2. Alexa Tell Me a Joke (02-AlexaTellMeAJoke)
 
-A GUI joke-telling assistant that loads setup-and-punchline pairs from an external text file (randomJokes.txt).
+A desktop joke assistant that reads setup-and-punchline pairs from randomJokes.txt.
 
-Key Features:
+Loads and parses jokes on startup with checks for missing or empty files.
 
-File reading and string parsing with error handling for missing or empty files.
+Picks random jokes without repeating the previous joke back-to-back.
 
-Non-repeating random joke selection (random.choice()).
-
-Two-step setup and punchline reveal flow with dynamic button state toggling.
-
-Wrapped text labels for clean formatting inside a fixed window layout.
+Separates the setup and punchline into two steps by toggling button states.
 
 
 
 
 3. Student Manager (03-StudentManager)
 
-An object-oriented student record management system backed by persistent storage in studentMarks.txt.
+A student record management app that reads from and saves updates to studentMarks.txt.
 
-Key Features:
+Uses a Student class to validate inputs and calculate totals, percentages, and grades (A–F).
 
-Encapsulated Student data model with strict input validation and @property calculations for coursework total (/60), overall mark (/160), percentage, and letter grade (A–F).
+Displays records in a ttk.Treeview table with green/red row highlights for A and F grades.
 
-Interactive ttk.Treeview table with color-coded A (green) and F (red) rows.
-
-Live search filtering by student name or 4-digit code.
-
-View and Sort menus for full class summaries, highest/lowest marks, and ascending/descending sorting.
-
-Reusable modal form dialog (StudentFormDialog) for adding, updating, and deleting records with automatic file saving.
-
+Supports searching by name or code, sorting by overall mark, viewing highest/lowest scores, and adding, updating, or deleting records.
 
 
 Raster Bulabos Rasca
