@@ -1,0 +1,10 @@
+9
+8439,Jake Hobbs,10,11,10,43
+1024,Amina Yusuf,15,14,16,68
+2231,Liam Carter,8,9,7,35
+5120,Sofia Reyes,18,17,19,81
+7765,Noah Kim,12,13,11,52
+3340,Emma Novak,19,18,20,92
+6612,Oliver Zane,5,6,4,28
+9987,Chloe Dubois,14,15,13,61
+4455,Ethan Wright,11,10,12,47
