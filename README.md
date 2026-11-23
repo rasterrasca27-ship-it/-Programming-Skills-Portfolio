@@ -4,16 +4,16 @@ This repository contains my solutions for the CodeLab II Programming Skills Port
 
 Repository Structure
 
+```text
 -Programming-Skills-Portfolio/
 ├── 01-MathsQuiz/
 │   └── MathsQuiz.py
 ├── 02-AlexaTellMeAJoke/
 │   ├── JokeApp.py
 │   └── randomJokes.txt
-├── 03-StudentManager/
-│   ├── StudentManager.py
-│   └── studentMarks.txt
-└── README.md
+└── 03-StudentManager/
+    ├── StudentManager.py
+    └── studentMarks.txt
 
 
 
