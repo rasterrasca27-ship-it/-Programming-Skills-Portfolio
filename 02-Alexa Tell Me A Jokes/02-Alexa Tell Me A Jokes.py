@@ -14,14 +14,14 @@ DEFAULT_JOKES = [
     
 def get_jokes_file():
     """Find randomJokes.txt beside the script or in AlexaJokes, or create a default."""
+    nested_path = os.path.join(BASE_DIR, "AlexaJokes", "randomJokes.txt")
+    if os.path.isfile(nested_path):
+        return nested_path
+
     for filename in ("randomJokes.txt", "randomjokes.txt"):
         path = os.path.join(BASE_DIR, filename)
         if os.path.isfile(path):
             return path
-
-    nested_path = os.path.join(BASE_DIR, "AlexaJokes", "randomJokes.txt")
-    if os.path.isfile(nested_path):
-        return nested_path
 
     default_path = os.path.join(BASE_DIR, "randomJokes.txt")
     with open(default_path, "w", encoding="utf-8") as file:
@@ -188,6 +188,15 @@ class JokeApp(tk.Tk):
 
     def tell_joke(self):
         """Pick a random joke without repeating the previous one."""
+        try:
+            self.jokes = load_jokes(DATA_FILE)
+        except (OSError, UnicodeDecodeError) as error:
+            messagebox.showerror(
+                "Could Not Load Jokes",
+                f"Could not read {DATA_FILE}: {error}"
+            )
+            self.jokes = []
+
         if not self.jokes:
             messagebox.showinfo("No Jokes", "No jokes could be loaded from randomJokes.txt.")
             return
